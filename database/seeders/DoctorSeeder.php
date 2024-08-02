@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\specialization;
 use App\Models\Specialties;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,7 +18,7 @@ class DoctorSeeder extends Seeder
     public function run(): void
     {
         DB::table("doctors")->insert([
-            "specialization_id"=> rand(1 , Specialties::all()->count()),
+            "specialization_id"=> rand(1 , specialization::all()->count()),
             "name"=>fake()->name() ,
             "phone_number"=> fake()->phoneNumber(),
 

@@ -6,14 +6,14 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class SpecialtiesSeeder extends Seeder
+class specializationSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table("Specialties")->insert([
+        DB::table("specializations")->insert([
             "name" => fake()->jobTitle() ,
         ]);
     }

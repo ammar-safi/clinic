@@ -26,6 +26,6 @@ class Appointment extends Model
         return $this->belongsTo(Patient::class);
     }
     public function Report() {
-        return $this->hasOne(Report::class , "id_appointment");
+        return $this->hasOne(Report::class);
     }
 }

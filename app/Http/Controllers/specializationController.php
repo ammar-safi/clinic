@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Specialties;
+use App\Models\specialization;
 use Illuminate\Http\Request;
 
-class SpecialtiesController extends Controller
+class specializationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class SpecialtiesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Specialties $specialties)
+    public function show(specialization $specialization)
     {
         //
     }
@@ -42,7 +42,7 @@ class SpecialtiesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Specialties $specialties)
+    public function edit(specialization $specialization)
     {
         //
     }
@@ -50,7 +50,7 @@ class SpecialtiesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Specialties $specialties)
+    public function update(Request $request, specialization $specialization)
     {
         //
     }
@@ -58,7 +58,7 @@ class SpecialtiesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Specialties $specialties)
+    public function destroy(specialization $specialization)
     {
         //
     }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string("phone_number");
             $table->foreignId("specialization_id")
                 ->references("id")
-                ->on("specialties")
+                ->on("specializations")
                 ->onDelete("cascade") ;
             $table->timestamps();
         });
