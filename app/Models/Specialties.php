@@ -16,6 +16,6 @@ class Specialties extends Model
 
 
     public function Doctor(){
-        return $this->hasOne(Doctor::class , "Specialize_id");
+        return $this->hasMany(Doctor::class);
     }
 }

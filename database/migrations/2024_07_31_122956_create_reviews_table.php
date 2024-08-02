@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("id_doctor")
+            $table->foreignId("doctor_id")
                 ->references("id")
                 ->on("doctors")
                 ->onDelete("cascade") ;
-            $table->foreignId("id_patient")
+            $table->foreignId("patient_id")
                 ->references("id")
                 ->on("patients")
                 ->onDelete("cascade") ;

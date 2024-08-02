@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("name");
             $table->string("phone_number");
-            $table->foreignId("id_specialization")
+            $table->foreignId("specialization_id")
                 ->references("id")
                 ->on("specialties")
                 ->onDelete("cascade") ;

@@ -12,14 +12,14 @@ class Doctor extends Model
     protected $fillable = [
         "name",
         "phone_number",
-        "id_specialization",
+        "specialization_id",
     ];
 
-    public function Specialize() {
-        return $this->belongsTo(Specialties::class);
+    public function specialize() {
+        return $this->belongsTo(Specialties::class) ;
     }
 
     public function Appointments(){
-        return $this->hasMany(Appointment::class , "doctor_id");
+        return $this->hasMany(Appointment::class , "id_doctor");
     }
 }
