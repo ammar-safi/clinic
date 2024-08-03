@@ -1,6 +1,16 @@
-@extends('layouts.app')
+
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    {{-- <h1>Dashboard</h1> --}}
+@stop
 
 @section('content')
+{{-- @extends('layouts.app') --}}
+<br>
+{{-- @section('content') --}}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -20,4 +30,14 @@
         </div>
     </div>
 </div>
-@endsection
+{{-- @endsection --}}
+@stop
+
+@section('css')
+    {{-- Add here extra stylesheets --}}
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+@stop
+
+@section('js')
+    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+@stop

@@ -18,7 +18,7 @@ class AppointmentSeeder extends Seeder
         DB::table("appointments")->insert([
             "doctor_id"=> rand(1 , Doctor::all()->count()),
             "patient_id"=> rand(1 , Patient::all()->count()),
-            "date"=> fake()->date("Y-m-d") ,
+            "date"=> date("Y-m-d")/*fake()->date("Y-m-d")*/ ,
             "time"=> fake()->date("H:i:s"),
             "state"=> rand(0,1),
 
