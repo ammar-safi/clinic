@@ -407,7 +407,19 @@ return [
                 ]
             ],
         ],
+        [
 
+            'text' => 'Report',
+            'icon' => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => "Add Report",
+                    'icon_color' => 'red',
+                    'url' => '/addreport',
+                ],
+                
+            ],
+        ],
         /* ['header' => 'labels'],
         [
             'text' => 'important',
