@@ -88,7 +88,7 @@ class ReportController extends Controller
     {
         $report = Report::find($request->id);
         $report->delete();
-        return redirect()->route('/');
+        return redirect()->route('index');
 
 
         //

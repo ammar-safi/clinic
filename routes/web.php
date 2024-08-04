@@ -36,7 +36,7 @@ Route::get('/editreport', [ReportController::class , 'editreport'])->name('editr
 Route::post('/editreport', [ReportController::class , 'reportedit'])->name('reportedit');
 
 
-Route::post('/deletreport', [ReportController::class , 'deletreport'])->name('deletreport');
+Route::get('/deletreport', [ReportController::class , 'deletreport'])->name('deletreport');
 
 
 
