@@ -383,6 +383,12 @@ return [
             // 'icon_color' => 'green',
             'url' => '/',
         ],
+      
+        [
+            'text' => "Add Report",
+            'icon_color' => 'red',
+            'url' => '/addreport',
+        ],
         
 
 
