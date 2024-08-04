@@ -330,10 +330,10 @@ return [
         ],
         [
             'text' => 'change_password',
-            'url' => 'admin/settings',
+            'url' => 'admin/password',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        [
+        /*[
             'text' => 'multilevel',
             'icon' => 'fas fa-fw fa-share',
             'submenu' => [
@@ -371,23 +371,44 @@ return [
                 ],
             ],
         ],
+*/
 
-        
         /////////////////////////////////////
         ///////// Add your icon Here ////////
         /////////////////////////////////////
-        
+
         ['header' => 'CONTROL'],
         [
-            'text' => "Appointments",
-            // 'icon_color' => 'green',
-            'url' => '/',
+
+            'text' => 'Appointments',
+            'icon' => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => "Appointments",
+                    'icon_color' => 'red',
+                    'url' => '/',
+                ]
+            ],
         ],
-        
+        [
 
+            'text' => 'Rating',
+            'icon' => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => "All Rating",
+                    'icon_color' => 'green',
+                    'url' => '/rating/all',
+                ],
+                [
+                    'text' => "Highest Rating",
+                    'icon_color' => 'blue',
+                    'url' => '/rating/high',
+                ]
+            ],
+        ],
 
-
-        ['header' => 'labels'],
+        /* ['header' => 'labels'],
         [
             'text' => 'important',
             'icon_color' => 'red',
@@ -403,6 +424,7 @@ return [
             'icon_color' => 'cyan',
             'url' => '#',
         ],
+        */
     ],
 
     /*

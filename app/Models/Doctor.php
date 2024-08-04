@@ -22,4 +22,7 @@ class Doctor extends Model
     public function Appointments(){
         return $this->hasMany(Appointment::class );
     }
+    public function Reviews(){
+        return $this->hasMany(Review::class );
+    }
 }
