@@ -51,7 +51,7 @@
                             <td>{{$report->Appointment->Patient->name}}</td>
                             <td>{{$report->description}}</td>
                             <td><button> <a href="{{route('editreport', ['id' => $report->id])}}">edite</a></button> -
-                               <button> <a href="{{route('deletreport', ['id' => $report->id])}}"></a>delete</button> 
+                               <button> <a href="{{route('deletreport', ['id' => $report->id])}}">delete</a></button> 
                             </td>
                         </tr>
                         </tr>

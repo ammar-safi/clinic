@@ -105,7 +105,7 @@
                         <td>{{$appointment->date}}</td>
                         <td>{{$appointment->time}}</td>
                         <td style="color:{{($appointment->state)?"green":"red"}}">{{($appointment->state)?"attend":"not attend"}}</td>
-                        <td><button><a href="{{/*Route('show report' , ['id'=>$appointment->id])*/'$'}}">Report</لاa></button></td>
+                        <td><button><a href="{{Route('showreport' , ['id'=>$appointment->id])}}">Report</لاa></button></td>
                     </tr>
                     @endforeach
                   

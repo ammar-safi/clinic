@@ -16,12 +16,12 @@ class ReportController extends Controller
     }
     public function showreport(Request $request)
     {
+
         $report = Report::where('id', '=', $request->id)->first();
         if ($report) {
             return view('raghad.report', ['report' => $report]);
         } else {
             return redirect()->route('addreport');
-
         }
         //
     }
@@ -39,16 +39,13 @@ class ReportController extends Controller
                 'description' => $request->Description
             ];
             $r->update($data);
-            return redirect()->route('showreport',['id'=> $request->id]);
-
-
+            return redirect()->route('showreport', ['id' => $request->id]);
         } else {
             Report::create([
                 'appointment_id' => $request->appointmentid,
                 'description' => $request->Description
             ]);
-            return redirect()->route('showreport',['id'=> $request->id]);
-
+            return redirect()->route('showreport', ['id' => $request->id]);
         }
     }
 
@@ -58,9 +55,10 @@ class ReportController extends Controller
      */
     public function editreport(Request $request)
     {
+        // dd($request->id);
         $data = Report::where('id', '=', $request->id)->first();
-
-        return view('raghad.editreport',['data'=> $data]);
+        // dd($data);
+        return view('raghad.editreport', ['data' => $data]);
 
         //
     }
@@ -71,11 +69,12 @@ class ReportController extends Controller
     public function reportedit(Request $request)
     {
         $report = Report::find($request->id);
+        // dd($request->id);
         $data = [
             'description' => $request->Description
         ];
         $report->update($data);
-        return redirect()->route('showreport',['id'=> $request->id]);
+        return redirect()->route('showreport', ['id' => $request->id]);
 
         //
     }
