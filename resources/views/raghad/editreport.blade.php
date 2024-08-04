@@ -20,12 +20,11 @@
     @stop
 
     @section('content')
-<form method="post" action="{{ route('editreport') }}">
-@csrf
+<form method="post" action="{{ route('reportedit' , ["id"=>$data->id]) }}">
+    @csrf
 
     <div class="card-body">
         <div class="form-group">
-            <!-- @dd($data); -->
             <label for="inputName">Appointment id</label>
             <input type="text" id="inputName" class="form-control" name="appointmentid" value="{{$data->appointment_id}}">
         </div>
