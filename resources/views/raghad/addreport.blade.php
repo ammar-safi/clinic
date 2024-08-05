@@ -20,13 +20,13 @@
     @stop
 
     @section('content')
-<form method="post" action="{{ route('addreport') }}">
-@csrf
+<form method="post" action="{{ route('reportadd') }}">
+    @csrf
 
     <div class="card-body">
         <div class="form-group">
             <label for="inputName">Appointment id</label>
-            <input type="text" id="inputName" class="form-control" name="appointmentid">
+            <input type="text" id="inputName" class="form-control" name="appointmentid" value="{{$id}}">
         </div>
         <div class="form-group">
             <label for="inputDescription"> Description</label>

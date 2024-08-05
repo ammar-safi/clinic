@@ -59,8 +59,8 @@
                 <th>Action</th>
             </tr>
             <tr>
-            <td>{{ $doctor->name }}</td>
-            <td>{{ number_format($average_rating, 2) }}</td>
+                <td>{{ $ratings1->Doctors->name }}</td>
+                <td>{{ $avgrate }}</td>
             @foreach ($reviews as $review)  
                 
                     <td>{{ $review->patient_name }}</td>

@@ -27,7 +27,7 @@ Route::get('/admin/password', [AdminController::class , 'changingPassword'])->mi
 
 
 // Route::get('/showallreports', [ReportController::class , 'index'])->name('showallreports');
-Route::get('/showreport/{id}', [ReportController::class , 'showreport'])->name('showreport');
+Route::get('/showreport', [ReportController::class , 'showreport'])->name('showreport');
 
 Route::get('/addreport', [ReportController::class , 'addreport'])->name('addreport');
 Route::post('/addreport', [ReportController::class , 'reportadd'])->name('reportadd');
@@ -36,7 +36,7 @@ Route::get('/editreport', [ReportController::class , 'editreport'])->name('editr
 Route::post('/editreport', [ReportController::class , 'reportedit'])->name('reportedit');
 
 
-Route::post('/deletreport', [ReportController::class , 'deletreport'])->name('deletreport');
+Route::get('/deletreport', [ReportController::class , 'deletreport'])->name('deletreport');
 
 
 

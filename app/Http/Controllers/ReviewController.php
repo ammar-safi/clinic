@@ -63,14 +63,14 @@ class ReviewController extends Controller
     } */
     public function show($id)
     {
-        // استرجاع الطبيب بناءً على ID الممرر  
-        $doctor = Doctor::with('Reviews')->findOrFail($id);
+        $ratings1 =  Review::where('doctor_id', $id)->get();
 
-        // حساب المتوسط الحسابي للتقييمات  
-        $ratings = $doctor->ratings;
-        $averageRating =  $ratings->avg('rate') ;
-        // تمرير البيانات إلى الفيو  
-        return view('ratings.viewrating', compact('doctor', 'averageRating'));
+        foreach ($ratings1 as $reting) {
+            $cout = count($reting);
+            $item += $reting->rate;
+        }
+        $avgrate = $item / $count;
+        return view('ratings.viewrating', compact('ratings1', 'avgrate'));
     }
     /**
      * Show the form for editing the specified resource.

@@ -30,7 +30,8 @@
         </div>
         <div class="form-group">
             <label for="inputDescription"> Description</label>
-            <textarea id="inputDescription" class="form-control" rows="4" name="Description" value="{{$data->description}}"></textarea>
+            <textarea id="inputDescription" class="form-control" rows="4" name="Description" >{{$data->description}}</textarea>
+            {{-- <input type="text" value="{{$data->description}}"> --}}
         </div>
 
 
