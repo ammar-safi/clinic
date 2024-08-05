@@ -23,3 +23,4 @@ Route::post('/appointment', [AppointmentController::class , 'index'])->name('app
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('appointments', AppointmentController::class);
