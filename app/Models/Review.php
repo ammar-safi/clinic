@@ -16,10 +16,10 @@ class Review extends Model
         "comment",
     ];
 
-    public function Doctors() {
+    public function Doctor() {
         return $this->belongsTo(Doctor::class);
     }    
-    public function patients() {
+    public function patient() {
         return $this->belongsTo(Patient::class , );
     }
 }
