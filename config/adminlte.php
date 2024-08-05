@@ -380,16 +380,24 @@ return [
         ['header' => 'CONTROL'],
         [
 
-            'text' => 'Appointments',
-            'icon' => 'fas fa-fw fa-share',
-            'submenu' => [
+            'text' => "Appointments",
+            'icon' => "fas fa-fw fa-share",
+            'submenu'=>[
                 [
-                    'text' => "Appointments",
-                    'icon_color' => 'red',
-                    'url' => '/',
-                ]
-            ],
+                'text' => "Appointments",
+                'icon_color' => "red",
+                'url' => '/',
+                ],
+                [
+                    'text' => 'Add Appointment',
+                    'url'  => 'appointments/create',
+                    'icon' => 'fas fa-fw fa-plus',
+                ],
+
+            ]
+            
         ],
+        
         [
 
             'text' => 'Rating',

@@ -48,6 +48,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::resource('appointments', AppointmentController::class);
+
+
 
 ////////////////
 
@@ -64,3 +67,4 @@ Route::post('rating/update/{id}', [ReviewController::class, 'update'])->name('up
 Route::get('rating/delete/{id}', [ReviewController::class, 'destroy'])->middleware('auth')->name('delete_rating');
 
 Route::get('rating/high', [ReviewController::class, 'get_high_doctor'])->middleware('auth')->name('high_rating');
+
