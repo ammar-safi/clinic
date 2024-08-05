@@ -17,35 +17,39 @@ class ReportController extends Controller
     public function showreport(Request $request)
     {
 
-        $report = Report::where('id', '=', $request->id)->first();
+        $report = Report::where('appointment_id', '=', $request->appointment_id)->first();
+        // dd($report);
         if ($report) {
             return view('raghad.report', ['report' => $report]);
         } else {
-            return redirect()->route('addreport');
+            // dd("ammar");
+            return redirect()->route('addreport' , ['id'=>$request->appointment_id]);
         }
         //
     }
-    public function addreport()
+    public function addreport(Request $request)
     {
-        return view('raghad.addreport');
+        return view('raghad.addreport' , ['id'=>$request->id]);
     }
     public function reportadd(Request $request)
     {
-        $exist = Report::find($request->appointmentid);
+        // $exist = Report::where($request->appointmentid);
+        $exist = Report::where('appointment_id', '=', $request->appointmentid)->first();
+        // dd($exist);
         if ($exist) {
             $r = Report::where('appointment_id', '=', $request->appointmentid)->first();
-
             $data = [
                 'description' => $request->Description
             ];
             $r->update($data);
             return redirect()->route('showreport', ['id' => $request->id]);
         } else {
-            Report::create([
+            $report = Report::create([
                 'appointment_id' => $request->appointmentid,
                 'description' => $request->Description
             ]);
-            return redirect()->route('showreport', ['id' => $request->id]);
+            // dd($report->appointment_id);
+            return redirect()->route('showreport', ['appointment_id' => $report->appointment_id]);
         }
     }
 
@@ -69,12 +73,13 @@ class ReportController extends Controller
     public function reportedit(Request $request)
     {
         $report = Report::find($request->id);
-        // dd($request->id);
+        // dd($report);
         $data = [
             'description' => $request->Description
         ];
         $report->update($data);
-        return redirect()->route('showreport', ['id' => $request->id]);
+        // dd($report);
+        return redirect()->route('showreport', ['appointment_id' => $report->appointment_id]);
 
         //
     }
